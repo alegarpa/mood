@@ -61,6 +61,15 @@ end
     @users = @user.followers.paginate(page: params[:page])
     render 'show_follow'
   end
+
+
+  def data
+    respond_to do |format|
+      format.json {
+        render :json => [1, 2, 3, 4, 5]
+      }
+    end
+  end
   
 
 

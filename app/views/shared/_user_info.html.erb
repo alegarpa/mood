@@ -1,3 +1,6 @@
 <h1><%= current_user.name %></h1>
 <h3> I GOT <%= current_user.feelings.count %> FEELZ</h3>
+<h3> I GOT <%= current_user.feelings.where(:status => 'happy').count %> Happy FEELZ</h3>
+<h3> I GOT <%= current_user.feelings.where(:status => 'sad').count %> Awful FEELZ</h3>
+<h3> I GOT <%= current_user.feelings.where(:status => 'alrigh').count %> Okay FEELZ</h3>
 <span><%= link_to "view my profile", current_user %></span>
