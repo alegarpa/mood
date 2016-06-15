@@ -1,0 +1,18 @@
+<%= form_for(@feeling) do |f| %>
+<%= render 'shared/error_messages', object: f.object %>
+<div> <%= hidden_field :feeling, :status, :value => "happy"%> </div>
+	<%= f.submit "Happy", class:  "btn btn-primary happy" %>
+<% end %>
+
+<%= form_for(@feeling) do |f| %>
+<%= render 'shared/error_messages', object: f.object %>
+<div> <%= hidden_field :feeling, :status, :value => "alrigh"%> </div>
+	<%= f.submit "So-So", class:  "btn btn-primary alright" %>
+<% end %>
+
+<%= form_for(@feeling) do |f| %>
+<%= render 'shared/error_messages', object: f.object %>
+<div> <%= hidden_field :feeling, :status, :value => "sad"%> </div>
+	<%= f.submit "Awful", class:  "btn btn-primary awful" %>
+<% end %>
+

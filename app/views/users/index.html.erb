@@ -6,9 +6,15 @@
 
 <ul class="users">
   <% @users.each do |user| %>
+  <% if (link_to user.feelings.any?) %>
     <li>
-      <%= link_to user.name, user %>
+      <%= link_to user.name, user %> WHO HAS <%= link_to user.feelings.count %> FEELZ
     </li>
+    <% else %>
+    	<li>
+    		 <%= link_to user.name, user %>
+    	</li>
+    <% end %>
   <% end %>
 </ul>
 

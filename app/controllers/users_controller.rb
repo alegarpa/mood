@@ -12,7 +12,7 @@ end
 
  def show
  	@user = User.find(params[:id])
-  @microposts = @user.microposts.paginate(page: params[:page])
+  @feelings = @user.feelings.paginate(page: params[:page])
  	#debugger
  end
 
